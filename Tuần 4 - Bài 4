@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n, q; cin >> n >> q;
+    vector<vector<int>> ar(n);
+    
+    for (int i=0; i<n; i++){
+        int dai; cin >> dai;
+        ar[i].resize(dai);
+        
+        for (int j=0; j<dai; j++){
+            cin >> ar[i][j];
+        }
+    }
+    
+    for (int i=0; i<q; i++){
+        int row, col; cin >> row >> col;
+        cout << ar[row][col] << endl;
+    }
+    return 0;
+}
